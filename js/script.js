@@ -218,6 +218,75 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 	// Reviews END
 
-	
+	// 3D SOLID DRAG/ROTATE START (D3 + Lodash)
+	// Certifique-se de ter:
+	// <script src="https://d3js.org/d3.v5.min.js"></script>
+	// <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+	// antes deste arquivo.
+
+	if (typeof d3 !== 'undefined') {
+		const sens = 0.25;
+		const el = d3.select('.solid');
+
+		if (!el.empty()) {
+			let autoX = 15;    // inclinação inicial em X
+			let autoY = 20;     // rotação inicial em Y
+			let manualX = 0;   // rotação adicionada pelo usuário
+			let manualY = 0;
+			let offsetX = 0;
+			let offsetY = 0;
+			let startManualX = 0;
+			let startManualY = 0;
+			let isDragging = false;
+
+			function updateTransform() {
+				el.style(
+					'transform',
+					`rotateX(${autoX + manualX}deg) rotateY(${autoY + manualY}deg)`
+				);
+			}
+
+			function getDragDeltaX() {
+				return (d3.event.y - offsetY) * sens;
+			}
+
+			function getDragDeltaY() {
+				return (d3.event.x - offsetX) * sens;
+			}
+
+			const drag = d3.drag()
+				.on('start', () => {
+					isDragging = true;
+					offsetX = d3.event.x;
+					offsetY = d3.event.y;
+					startManualX = manualX;
+					startManualY = manualY;
+				})
+				.on('drag', () => {
+					manualX = startManualX + getDragDeltaX();
+					manualY = startManualY + getDragDeltaY();
+					updateTransform();
+				})
+				.on('end', () => {
+					isDragging = false;
+				});
+
+			el.call(drag);
+
+			// loop de animação suave
+			function tick() {
+				if (!isDragging) {
+					// ajusta essas velocidades se quiser mais lento/rápido
+					autoY += 0.06;   // gira em Y
+					autoX += 0.015;  // leve balanço em X
+				}
+				updateTransform();
+				requestAnimationFrame(tick);
+			}
+			tick();
+		}
+	}
+	// 3D SOLID DRAG/ROTATE END
 
 })
+

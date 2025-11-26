@@ -514,16 +514,28 @@ textarea::placeholder {
 	margin-right: 90px;
 	max-width: 505px;
 }
-
+/* 
 .about-right {
 	width: 550px;
+	min-height: 400px; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: var(--bgLightGray); 
+    border-radius: 8px; 
+} */
+
+/* .about-right .engeplena-logo-css {
+    transform: scale(5); 
 }
 
 .about-right img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-}
+} */
 
 /* About END */
 
@@ -1500,10 +1512,15 @@ textarea::placeholder {
 	}
 
 	.about-right {
-		margin: 0 auto;
-		width: 100%;
-		max-width: 505px;
-	}
+        width: 100%; 
+        min-height: 300px; 
+        margin-top: 30px;
+		/* cursor: pointer; */
+    }
+
+    .about-right .engeplena-logo-css {
+        transform: scale(3.5); /* Diminui um pouco a escala para não estourar a tela no celular */
+    }
 
 	/* About 992 END */
 
@@ -1995,9 +2012,21 @@ textarea::placeholder {
 
 	/* Banner 575 START */
 	.banner-swiper .swiper-slide {
-		padding: 60px 20px 100px 20px;
+		padding: 100px 20px 100px 20px;
+	}
+	
+	/*Sobrepoe estilo do swiper.bundle.min.css*/
+	.swiper-autoheight, .swiper-autoheight .swiper-slide{
+		height:inherit;
+	}
+	.swiper-wrapper{
+		height:475px;
 	}
 
+
+
+
+	
 	.banner-subtitle {
 		font-size: 12px;
 	}
@@ -2106,6 +2135,97 @@ textarea::placeholder {
 	.modal-form .form-button {
 		font-size: 14px;
 	}
+
+	}
+* 
+
+
+.about-right {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-/* Responsive END */
+.solid {
+	position: relative;
+	width: 200px;           
+	height: 200px;      
+	transform-style: preserve-3d;
+	cursor: pointer;
+
+}
+
+.solid .side {
+	position: absolute;
+	left: 0;
+	bottom: 50%;
+	border-bottom: 173.2px solid white;    
+	border-left: 100px solid transparent; 
+	border-right: 100px solid transparent; 
+	transform-origin: 50% 100%;
+	opacity: 0.7;
+	filter:
+		drop-shadow(0 0 0 var(--principalGreen))   
+		drop-shadow(0 0 5px var(--principalGreen)); 
+}
+
+.solid span {
+  position: absolute;
+}
+
+.solid .side:nth-child(1) {
+	transform: rotateY(90deg) translateZ(100px) rotateX(35.27deg);
+	border-bottom-color: var(--lightGreen);
+}
+
+.solid .side:nth-child(2) {
+	transform: rotateY(180deg) translateZ(100px) rotateX(35.27deg);
+	border-bottom-color: var(--lightGreen);
+}
+
+.solid .side:nth-child(3) {
+	transform: rotateY(270deg) translateZ(100px) rotateX(35.27deg);
+	border-bottom-color: var(--lightGreen);
+}
+
+.solid .side:nth-child(4) {
+	transform: rotateY(360deg) translateZ(100px) rotateX(35.27deg);
+	border-bottom-color: var(--principalGreen);
+	opacity:1
+
+}
+
+.solid .side:nth-child(5) {
+	transform: rotateY(450deg) translateZ(100px) rotateX(144.73deg);
+	border-bottom-color: var(--white);
+	opacity:0.1;
+}
+
+.solid .side:nth-child(6) {
+	transform: rotateY(540deg) translateZ(100px) rotateX(144.73deg);
+	border-bottom-color: var(--white);
+	opacity:0.1;
+}
+
+.solid .side:nth-child(7) {
+	transform: rotateY(630deg) translateZ(100px) rotateX(144.73deg);
+	border-bottom-color: var(--white);
+	opacity:0.1;
+}
+
+.solid .side:nth-child(8) {
+	transform: rotateY(720deg) translateZ(100px) rotateX(144.73deg);
+	border-bottom-color: var(--white);
+	opacity:0.1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(720deg) rotateZ(1080deg);
+  }
+} */
