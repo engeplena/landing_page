@@ -180,7 +180,6 @@ textarea::placeholder {
 	display:none;
 }
 
-
 .header-menu {
 	position: fixed;
     top: 0;
@@ -190,18 +189,15 @@ textarea::placeholder {
     transform: none;     
     border-radius: 0;    
     background-color: transparent;
-    /* box-shadow: 0px 4px 10px var(--shadowBlack);  */
-    transition: all 0.35s ease; /* Animação suave na transição */
+    transition: all 0.35s ease; 
     z-index: 999;
 }
 
-/* Ajuste interno para o container continuar centralizado */
 .header-menu .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Removemos a cor da linha interna para não conflitar com o fundo total */
 .header-menu .header-menu-row {
     background-color: transparent; 
     box-shadow: none;
@@ -1780,7 +1776,6 @@ textarea::placeholder {
 		bottom: 0;
 	}
 
-	/* .hamburger.is-active {} */
 
 	.hamburger.is-active span:first-child {
 		top: 50%;
@@ -1791,9 +1786,7 @@ textarea::placeholder {
 		top: 50%;
 		transform: translateY(-4px) rotate(-45deg);
 	}
-	/* .header-mobile{
-		background-color: var(--principalGreen);
-	} */
+
 
 	.header-mobile-wrap {
 		position: fixed;
