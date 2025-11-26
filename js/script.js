@@ -14,13 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
+
 	function scrollHeader() {
-		let headerTopHeight = $('.header-top').height();
-		if($(this).scrollTop() > headerTopHeight) {
-			$('.header-bottom').addClass('is-fixed');
-		}
-		else {
-			$('.header-bottom').removeClass('is-fixed');
+		// Cache dos seletores para performance
+		const $window = $(window);
+		const $headerBottom = $('.header-bottom');
+		const $socialSidebar = $('.social-sidebar');
+		const headerTopHeight = $('.header-top').outerHeight(); 
+
+		if ($window.scrollTop() > headerTopHeight) {
+			$headerBottom.addClass('is-fixed');
+			$socialSidebar.addClass('is-visible');
+		} else {
+			$headerBottom.removeClass('is-fixed');
+			$socialSidebar.removeClass('is-visible');
 		}
 	}
 	function showArrowUp() {
