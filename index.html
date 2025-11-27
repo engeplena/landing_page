@@ -833,26 +833,65 @@
 				<div class="form-left">
 					<h2 class="def-title">Fale Conosco</h2>
 					<div class="def-desc">
-						Como atuamos com diversos clientes e obras, temos sempre contatos com prestadores de serviços,
-						venda de materiais e outras oportunidades de negócios dentro da indústria da construção civil.
-						</br>
-						Teremos prazer em encaminhá-lo SEM CUSTO.
+						<p>Como atuamos com diversos clientes e obras, temos sempre contatos com prestadores de serviços, venda de materiais e outras oportunidades de negócios dentro da indústria da construção civil.</p>
+						<p><strong>Teremos prazer em encaminhá-lo SEM CUSTO.</strong></p>
 					</div>
 					<div class="form-map">
 						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.1407826002496!2d-43.806745823220474!3d-20.252995281209376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6a9f7ba0ed1e3%3A0x3cf05f87311d2d10!2sENGEPLENA%20ENGENHARIA%20LTDA.!5e0!3m2!1spt-BR!2sbr!4v1763666061313!5m2!1spt-BR!2sbr"
-							width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"></iframe>
+							src="https://googleusercontent.com/maps.google.com/0" 
+							title="Localização da Engeplena Engenharia no Google Maps"
+							width="100%" 
+							style="border:0;" 
+							allowfullscreen="" 
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade">
+						</iframe>
 					</div>
 				</div>
 
 				<div class="form-right">
-					<form>
-						<input type="text" placeholder="Nome*" required>
-						<input type="text" placeholder="Telefone*" required>
-						<input type="text" placeholder="Email">
-						<textarea cols="30" rows="5" placeholder="Mensagem"></textarea>
-						<button class="def-btn form-button" data-track="submit_contact_form">Enviar</button>
+					<form id="contact-form" action="#" method="POST">
+						
+						<input 
+							type="text" 
+							name="nome" 
+							id="form-nome" 
+							placeholder="Nome*" 
+							aria-label="Seu nome completo"
+							autocomplete="name"
+							required
+						>
+
+						<input 
+							type="tel" 
+							name="telefone" 
+							id="form-telefone" 
+							placeholder="Telefone*" 
+							aria-label="Seu telefone de contato"
+							autocomplete="tel"
+						>
+
+						<input 
+							type="email" 
+							name="email" 
+							id="form-email" 
+							placeholder="Email" 
+							aria-label="Seu endereço de email"
+							autocomplete="email"
+						>
+
+						<textarea 
+							name="mensagem" 
+							id="form-mensagem" 
+							cols="30" 
+							rows="5" 
+							placeholder="Mensagem"
+							aria-label="Sua mensagem"
+						></textarea>
+
+						<button type="submit" class="def-btn form-button" data-track="submit_contact_form">
+							Enviar
+						</button>
 					</form>
 				</div>
 
