@@ -246,12 +246,12 @@ textarea::placeholder {
 
 .social-sidebar {
     position: fixed;
-    right: 20px;           /* Fixado à direita */
-    top: 50%;              /* Centralizado verticalmente */
+    right: 20px;
+    top: 50%;
     transform: translateY(-50%) translateX(100px); /* Começa escondido na direita */
     display: flex;
     flex-direction: column;
-    gap: 15px;             /* Espaço entre ícones */
+    gap: 15px;
     z-index: 990;
     opacity: 0;
     visibility: hidden;
@@ -270,21 +270,21 @@ textarea::placeholder {
     justify-content: center;
     width: 45px;
     height: 45px;
-    background-color: var(--principalGreen); /* Verde da marca */
+    background-color: var(--principalGreen); 
     border-radius: 50%;
     box-shadow: 0 4px 6px var(--shadowBlack);
     transition: transform 0.3s ease, background-color 0.3s;
 }
 
 .social-sidebar a:hover {
-    background-color: var(--darkGreen); /* Verde mais escuro no hover */
+    background-color: var(--darkGreen); 
     transform: scale(1.1);
 }
 
 .social-sidebar img {
     width: 20px;
     height: 20px;
-    filter: brightness(0) invert(1); /* Garante ícones brancos */
+    filter: brightness(0) invert(1);
 }
 
 .go-up {
@@ -307,16 +307,25 @@ textarea::placeholder {
 
 .go-up a {
 	background-color: var(--principalGreen);
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: background-color 0.35s ease;
+	transition: background-color 0.35s ease, transform 0.3s ease;
+	transform: rotate(45deg);
+	border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadowBlack);
+}
+
+go-up a:hover {
+    background-color: var(--darkGreen);
+    transform: rotate(45deg) scale(1.1); 
 }
 
 .go-up img {
-	max-width: 50%;
+    max-width: 50%;
+    transform: rotate(-45deg); 
 }
 
 /* Header END */
