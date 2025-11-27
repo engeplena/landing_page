@@ -257,12 +257,12 @@
 							ensino, buscamos a aplicação consistente de diversos conteúdos em nossos serviços.
 						</p>
 					</div>
-					<a href="#s-services" class="def-btn anchor-link wow fadeInLeft" data-wow-delay="0.4s">
+					<a href="#s-services" class="def-btn anchor-link wow fadeInLeft" data-wow-delay="0.4s" aria-label="Ir para seção de serviços" data-track="btn_about_orcamento">
 						Solicitar Orçamento
 					</a>
 				</div>
 
-				<div class="about-right">
+				<div class="about-right wow fadeInRight" data-wow-delay="0.1s">
 					 <div class="scene">
 						<div class="solid">
 							<div class="side top top1"></div>
@@ -297,28 +297,26 @@
 
 				<div class="numbers-right">
 					<div class="numbers-item wow fadeInUp">
-						<div class="numbers-num">+<span class="num-js" data-count="20">0</span></div>
-						<div class="numbers-desc">
-							Anos de experiência
+						<div class="numbers-num"  aria-hidden="true">
+							<span class="num-js" data-count="20">0</span>+
 						</div>
+						<div class="numbers-desc">Anos de experiência</div>
 					</div>
 					<div class="numbers-item wow fadeInUp">
-						<div class="numbers-num">+<span class="num-js" data-count="50">0</span>.000 m²</div>
-						<div class="numbers-desc">
-							em Projetos estruturais
+						<div class="numbers-num"  aria-hidden="true">
+							+<span class="num-js" data-count="50">0</span><span>.000</span> m²
 						</div>
+						<div class="numbers-desc">em Projetos estruturais</div>
 					</div>
 					<div class="numbers-item wow fadeInUp">
-						<div class="numbers-num">+<span class="num-js" data-count="21">0</span>.000 m²</div>
-						<div class="numbers-desc">
-							em Obras executadas
+						<div class="numbers-num" aria-hidden="true">
+							+<span class="num-js" data-count="21">0</span><span>.000</span> m²
 						</div>
+						<div class="numbers-desc">em Obras executadas</div>
 					</div>
 					<div class="numbers-item wow fadeInUp">
-						<div class="numbers-num">R$ <span class="num-js" data-count="16">0</span> Mi</div>
-						<div class="numbers-desc">
-							em Orçamentos processados
-						</div>
+						<div class="numbers-num" aria-hidden="true">R$ <span class="num-js" data-count="16">0</span> Mi+</div>
+						<div class="numbers-desc" aria-hidden="true">em Orçamentos processados</div>
 					</div>
 				</div>
 
@@ -767,20 +765,66 @@
 	</section>
 
 
-	<div class="s-partners" id="s-partners">
-		<div class="partners-row">
-			<div class="partners-item"><img src="images/partner-1.svg" alt="partner"></div>
-			<div class="partners-item"><img src="images/partner-2.svg" alt="partner"></div>
-			<div class="partners-item"><img src="images/partner-3.svg" alt="partner"></div>
-			<div class="partners-item"><img src="images/partner-4.svg" alt="partner"></div>
-			<div class="partners-item"><img src="images/partner-5.svg" alt="partner"></div>
-			<div class="partners-item"><img src="images/partner-1.svg" alt="partner"></div>
-			<div class="partners-item"><img src="images/partner-2.svg" alt="partner"></div>
-			<div class="partners-item"><img src="images/partner-3.svg" alt="partner"></div>
-			<div class="partners-item"><img src="images/partner-4.svg" alt="partner"></div>
-			<div class="partners-item"><img src="images/partner-5.svg" alt="partner"></div>
+	<section class="s-partners" id="s-partners">
+		<div class="container">
+			<h2 class="center-title wow fadeIn" data-wow-delay="0.1s">Nossos Clientes</h2>
+
+			<div class="partners-wrapper wow fadeInUp" data-wow-delay="0.2s">
+				
+				<div class="partners-track">
+					
+					<a href="https://site-do-parceiro.com" target="_blank" rel="noopener noreferrer" class="partners-item" aria-label="Visitar site da Empresa Parceira 1">
+						<img src="images/partner-1.svg" alt="Logo da Empresa Parceira 1" loading="lazy" width="250" height="50">
+					</a>
+					<!--Exemplo de parceiro sem link-->
+					<div class="partners-item">
+						<img src="images/partner-2.svg" alt="Logo da Empresa Parceira 2" loading="lazy" width="250" height="50">
+					</a>
+					<!--Exemplo de parceiro sem logo-->
+					<a href="https://site-parceiro-c.com" target="_blank" rel="noopener noreferrer" class="partners-item text-only" aria-label="Visitar site da Construtora Rocha">
+						<span class="partner-name">Construtora Rocha</span>
+					</a>
+					<!--Exemplo de parceiro sem logo e sem link-->
+					<div class="partners-item text-only">
+						<span class="partner-name">Imobiliária Silva</span>
+					</div>
+					<div class="partners-item">
+						<img src="images/partner-3.svg" alt="Logo da Empresa Parceira 3" loading="lazy" width="250" height="50">
+					</div>
+					<div class="partners-item">
+						<img src="images/partner-4.svg" alt="Logo da Empresa Parceira 4" loading="lazy" width="250" height="50">
+					</div>
+					<div class="partners-item">
+						<img src="images/partner-5.svg" alt="Logo da Empresa Parceira 5" loading="lazy" width="250" height="50">
+					</div>
+
+					<!--Duplica lista para simular efeito circular-->
+					<a href="https://site-do-parceiro.com" target="_blank" rel="noopener noreferrer" class="partners-item" aria-label="Visitar site da Empresa Parceira 1">
+						<img src="images/partner-1.svg" alt="Logo da Empresa Parceira 1" loading="lazy" width="250" height="50">
+					</a>
+					<div class="partners-item">
+						<img src="images/partner-2.svg" alt="Logo da Empresa Parceira 2" loading="lazy" width="250" height="50">
+					</a>
+					<a href="https://site-parceiro-c.com" target="_blank" rel="noopener noreferrer" class="partners-item text-only" aria-label="Visitar site da Construtora Rocha">
+						<span class="partner-name">Construtora Rocha</span>
+					</a>
+					<div class="partners-item text-only">
+						<span class="partner-name">Imobiliária Silva</span>
+					</div>
+					<div class="partners-item">
+						<img src="images/partner-3.svg" alt="Logo da Empresa Parceira 3" loading="lazy" width="250" height="50">
+					</div>
+					<div class="partners-item">
+						<img src="images/partner-4.svg" alt="Logo da Empresa Parceira 4" loading="lazy" width="250" height="50">
+					</div>
+					<div class="partners-item">
+						<img src="images/partner-5.svg" alt="Logo da Empresa Parceira 5" loading="lazy" width="250" height="50">
+					</div>
+
+				</div>
+			</div>
 		</div>
-	</div>
+	</section>
 
 	<section class="s-form" id="s-contact">
 		<div class="container">
