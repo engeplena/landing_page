@@ -272,6 +272,7 @@ textarea::placeholder {
     justify-content: center;
     width: 45px;
     height: 45px;
+	opacity:0.7;
     background-color: var(--principalGreen); 
     border-radius: 50%;
     box-shadow: 0 4px 6px var(--shadowBlack);
@@ -279,7 +280,7 @@ textarea::placeholder {
 }
 
 .social-sidebar a:hover {
-    background-color: var(--darkGreen); 
+	opacity:1;
     transform: scale(1.1);
 }
 
@@ -967,47 +968,139 @@ textarea::placeholder {
 }
 /* Why END */
 
-
 /* Team START */
 .s-team {
-	padding: 100px 0;
-	background-color: var(--bgLightGray);;
+    padding: 100px 0;
+    background-color: var(--bgDarkGreen); 
+    color: var(--white);
+    position: relative;
+    overflow: hidden;  
+    z-index: 1;
+}
+
+.s-team::before {
+    content: '';
+    position: absolute;
+    
+    top: 50%;
+    right: -5%; 
+    transform: translateY(-50%);
+    
+    width: 600px; 
+    height: 600px;
+    
+    background-image: url('../images/Watermark.svg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+    opacity: 0.03;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.s-team .container {
+    position: relative;
+    z-index: 2;
+}
+
+.s-team .center-title {
+    color: var(--white);
+}
+.s-team .center-title::after {
+    background-color: var(--white); 
 }
 
 .team-row {
-	display: flex;
-	column-gap: 35px;
+    display: flex;
+    justify-content: center;
+    column-gap: 35px;
+    flex-wrap: wrap; 
+    row-gap: 35px;   
 }
 
 .team-item {
-	box-shadow: 0px 4px 4px 0px var(--shadowWarm);
-	height: 100%;
-	background-color: var(--white);;
+    background-color: var(--white);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+    height: 100%;
+    
+    flex: 0 1 350px; 
+    max-width: 370px; 
+    border-radius: 8px; 
+    overflow: hidden;  
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.4);
+}
+
+.team-thumb {
+    width: 100%;
+    height: 350px; 
+    overflow: hidden;
 }
 
 .team-thumb img {
-	width: 100%;
-	display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: top center; 
+    transition: transform 0.5s ease;
+}
+
+.team-item:hover .team-thumb img {
+    transform: scale(1.05); 
 }
 
 .team-body {
-	background-color: var(--white);;
-	padding: 20px 30px;
-}
-
-.team-profi {
-	text-transform: uppercase;
-	color: var(--mediumGreen);
-	margin-bottom: 5px;
+    background-color: var(--white);
+    padding: 25px 30px;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 140px; 
 }
 
 .team-name {
-	font-size: 22px;
-	font-weight: 700;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 8px;
+    line-height: 1.3;
 }
 
-/* Team END */
+.team-profi {
+    text-transform: uppercase;
+    color: var(--principalGreen); 
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
 
+@media screen and (max-width: 768px) {
+    .team-thumb {
+        height: 300px;
+    }
+    
+    .team-item {
+        max-width: 100%; 
+        flex: 0 0 100%;
+    }
+    
+    .s-team::before {
+        width: 300px;
+        height: 300px;
+        right: -15%;
+        opacity: 0.02;
+    }
+}
+/* Team END */
 
 /* =========================================
    Partners START
@@ -1383,6 +1476,8 @@ a.partners-item:hover .partner-name {
 /* Responsive START */
 @media screen and (max-width: 1200px) {
 
+
+
 	/* Header 1200 START */
 	.header-logo {
 		padding: 5px 50px 5px 20px;
@@ -1409,7 +1504,9 @@ a.partners-item:hover .partner-name {
 	.why-right img {
 		max-width: 450px;
 	}
-
+	.why-header {
+		text-wrap:initial ;
+	}
 	/* Why us 1200 END */
 
 }
