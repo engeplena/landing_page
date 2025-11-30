@@ -1,6 +1,14 @@
+// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 document.addEventListener('DOMContentLoaded', () => {
 
-	new WOW().init();
+	// new WOW().init();
+	new WOW({
+        boxClass:     'wow',      
+        animateClass: 'animated', 
+        offset:       0,          
+        mobile:       false,       
+        live:         false    
+    }).init();
 
 	// Header START
 	$('.hamburger').on('click', function() {
@@ -155,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         observer.observe(aboutSection);
     }
-	
+
 	// Services START
 	$('.services-btn').magnificPopup({
 		type: 'inline',
@@ -228,74 +236,90 @@ document.addEventListener('DOMContentLoaded', () => {
 	// WhatsApp Form Integration END
 
 
-	// 3D SOLID DRAG/ROTATE START (D3 + Lodash)
-	// Certifique-se de ter:
-	// <script src="https://d3js.org/d3.v5.min.js"></script>
-	// <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
-	// antes deste arquivo.
+	// 3D SOLID DRAG/ROTATE START 
 
-	if (typeof d3 !== 'undefined') {
-		const sens = 0.25;
-		const el = d3.select('.solid');
+    const el = document.querySelector('.solid');
 
-		if (!el.empty()) {
-			let autoX = 15;    // inclinação inicial em X
-			let autoY = 20;     // rotação inicial em Y
-			let manualX = 0;   // rotação adicionada pelo usuário
-			let manualY = 0;
-			let offsetX = 0;
-			let offsetY = 0;
-			let startManualX = 0;
-			let startManualY = 0;
-			let isDragging = false;
+    if (!el) {
+        console.error("ERRO: Elemento .solid não encontrado no HTML!");
+        return;
+    }
 
-			function updateTransform() {
-				el.style(
-					'transform',
-					`rotateX(${autoX + manualX}deg) rotateY(${autoY + manualY}deg)`
-				);
-			}
 
-			function getDragDeltaX() {
-				return (d3.event.y - offsetY) * sens;
-			}
+    const sens = 0.25;
+    let autoX = 15;
+    let autoY = 20;
+    let manualX = 0;
+    let manualY = 0;
+    
+    let isDragging = false;
+    let startX = 0;
+    let startY = 0;
+    let initialManualX = 0;
+    let initialManualY = 0;
 
-			function getDragDeltaY() {
-				return (d3.event.x - offsetX) * sens;
-			}
+    function updateTransform() {
+        el.style.transform = `rotateX(${autoX + manualX}deg) rotateY(${autoY + manualY}deg)`;
+    }
 
-			const drag = d3.drag()
-				.on('start', () => {
-					isDragging = true;
-					offsetX = d3.event.x;
-					offsetY = d3.event.y;
-					startManualX = manualX;
-					startManualY = manualY;
-				})
-				.on('drag', () => {
-					manualX = startManualX + getDragDeltaX();
-					manualY = startManualY + getDragDeltaY();
-					updateTransform();
-				})
-				.on('end', () => {
-					isDragging = false;
-				});
+    // Eventos de Mouse
+    el.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        initialManualX = manualX;
+        initialManualY = manualY;
+        el.style.cursor = 'grabbing';
+    });
 
-			el.call(drag);
+    window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault(); // Evita seleções indesejadas
+        const deltaX = e.clientX - startX;
+        const deltaY = e.clientY - startY;
+        manualX = initialManualX + (deltaY * sens);
+        manualY = initialManualY + (deltaX * sens);
+        updateTransform();
+    });
 
-			// loop de animação suave
-			function tick() {
-				if (!isDragging) {
-					// ajusta essas velocidades se quiser mais lento/rápido
-					autoY += 0.06;   // gira em Y
-					autoX += 0.015;  // leve balanço em X
-				}
-				updateTransform();
-				requestAnimationFrame(tick);
-			}
-			tick();
-		}
-	}
+    window.addEventListener('mouseup', () => {
+        isDragging = false;
+        el.style.cursor = 'pointer';
+    });
+
+    // Eventos de Touch (Mobile)
+    el.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        initialManualX = manualX;
+        initialManualY = manualY;
+    }, {passive: false});
+
+    window.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        // e.preventDefault(); // Descomente se quiser bloquear o scroll da tela ao girar
+        const deltaX = e.touches[0].clientX - startX;
+        const deltaY = e.touches[0].clientY - startY;
+        manualX = initialManualX + (deltaY * sens);
+        manualY = initialManualY + (deltaX * sens);
+        updateTransform();
+    }, {passive: false});
+
+    window.addEventListener('touchend', () => {
+        isDragging = false;
+    });
+
+    function tick() {
+        if (!isDragging) {
+            autoY += 0.05;   // Aumentei a velocidade para testar visualização
+            autoX -= 0.05;
+        }
+        updateTransform();
+        requestAnimationFrame(tick);
+    }
+    
+    tick();
 	// 3D SOLID DRAG/ROTATE END
 
 })
