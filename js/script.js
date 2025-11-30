@@ -136,7 +136,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 	// Banner END
 
-
+	const aboutSection = document.getElementById('s-about');
+    
+    if(aboutSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // O usuário chegou perto da seção: Baixar o D3 agora!
+                    const script = document.createElement('script');
+                    script.src = "https://d3js.org/d3.v5.min.js";
+                    script.defer = true;
+                    document.body.appendChild(script);
+                    
+                    observer.disconnect(); // Para de observar depois de carregar
+                }
+            });
+        }, { rootMargin: "200px" }); // Começa a baixar 200px antes de chegar
+        
+        observer.observe(aboutSection);
+    }
+	
 	// Services START
 	$('.services-btn').magnificPopup({
 		type: 'inline',

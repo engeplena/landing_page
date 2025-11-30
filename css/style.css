@@ -337,8 +337,12 @@ textarea::placeholder {
 /* Banner START */
 .s-banner {
     min-height: 600px; 
-    background-color: var(--bgLightGray); 
+    background-color:#f0f0f0; 
     overflow: hidden;
+}
+.s-banner .slide-bg {
+    height: 100%;
+    object-fit: cover;
 }
 @media screen and (max-width: 768px) {
     .s-banner {
