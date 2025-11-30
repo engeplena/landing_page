@@ -335,6 +335,16 @@ textarea::placeholder {
 
 
 /* Banner START */
+.s-banner {
+    min-height: 600px; 
+    background-color: var(--bgLightGray); 
+    overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+    .s-banner {
+        min-height: 475px; /* Ajuste conforme a altura real da sua imagem mobile */
+    }
+}
 .banner-swiper:hover .swiper-button-next,
 .banner-swiper:hover .swiper-button-prev {
 	transform: none;
