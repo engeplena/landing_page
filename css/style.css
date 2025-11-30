@@ -3,6 +3,7 @@
 
 :root {
     /* Paleta de Cores */
+	--lighterGreen: #E2EDEB;
     --lightGreen: #AACBC4;
     --mediumGreen: #5A8F76;
     --principalGreen: #48887B; /* Cor Principal */
@@ -12,6 +13,7 @@
 	/* --- Neutros--- */
     --white: #ffffff;
     --black: #000000;
+	--bgWhite: #F7FAF9;
     --bgLightGray: #F9F9F9;     /* Fundos alternados de seção */
     --bgInput: #F6F6F6;         /* Fundo de inputs */
     --textGray: #6D6A6A;        /* Texto padrão de parágrafos */
@@ -22,7 +24,7 @@
 	/* --- Sombras e Overlays --- */
     --borderWhiteOp: rgba(255, 255, 255, 0.24); /* Bordas sutis em fundos escuros */
 	--shadowBlack: rgba(0, 0, 0, 0.15);       /* Sombra padrão escura */
-    --shadowWarm: var(--shadowWarm);     /* Sombra "quente" para cards (Team/Reviews) */
+    --shadowWarm: var(--shadowWarm);     /* Sombra "quente" para cards */
     --overlayBanner: rgba(35, 31, 31, 0.80);  /* Escurecimento do banner */
     --overlayHover: rgba(68, 62, 62, 0.72); /* Efeito de hover na galeria */
 
@@ -93,7 +95,6 @@ textarea::placeholder {
 .services-title,
 .why-features-title,
 .team-name,
-.reviews-name,
 .footer-title,
 .modal-form-title,
 .def-btn,        /* Botões Padrão */
@@ -112,6 +113,7 @@ textarea::placeholder {
 .def-title {
 	font-size: 42px;
 	font-weight: 700;
+	color: var(--principalGreen);
 	position: relative;
 	margin-bottom: 25px;
 	line-height: 1.4;
@@ -120,7 +122,7 @@ textarea::placeholder {
 .center-title {
 	font-size: 42px;
 	font-weight: 700;
-	color: var(--darkGreen);
+	color: var(--principalGreen);
 	text-align: center;
 	margin-bottom: 40px;
 }
@@ -318,8 +320,8 @@ textarea::placeholder {
     box-shadow: 0 4px 10px var(--shadowBlack);
 }
 
-go-up a:hover {
-    background-color: var(--darkGreen);
+.go-up a:hover {
+    /* background-color: var(--darkGreen); */
     transform: rotate(45deg) scale(1.1); 
 }
 
@@ -460,12 +462,12 @@ go-up a:hover {
 	outline: none;
 
 	transform: rotate(45deg);
-	background: linear-gradient(135deg, var(--lightGreen) 55%, transparent 45%);
+	background: linear-gradient(135deg, var(--lightGreen) 100%);
 	transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-    background: linear-gradient(135deg, var(--principalGreen) 55%, transparent 45%);
+    background: linear-gradient(135deg, var(--principalGreen) 100%);
 	border-color: var(--principalGreen);     
     transform: rotate(45deg) scale(1.2);
 }
@@ -504,28 +506,6 @@ go-up a:hover {
 	margin-right: 90px;
 	max-width: 505px;
 }
-/* 
-.about-right {
-	width: 550px;
-	min-height: 400px; 
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    background-color: var(--bgLightGray); 
-    border-radius: 8px; 
-} */
-
-/* .about-right .engeplena-logo-css {
-    transform: scale(5); 
-}
-
-.about-right img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-} */
 
 /* About END */
 
@@ -534,6 +514,38 @@ go-up a:hover {
 	background-color: var(--bgDarkGreen);
 	color: var(--white);;
 	padding: 72px 0;
+    position: relative; 
+    overflow: hidden;  
+    z-index: 1;        
+}
+
+/* O Pseudo-elemento que contém a imagem */
+.s-numbers::before {
+    content: '';
+    position: absolute;
+    
+    top: 50%;
+    left: -5%; /* Joga um pouco para fora da tela à direita */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    
+    width: 500px;  
+    height: 500px;
+    
+    /* Imagem */
+    background-image: url('../images/Watermark.svg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+    /* Efeito de Marca d'água */
+    opacity: 0.05; 
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+.s-numbers .container {
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -589,8 +601,8 @@ go-up a:hover {
 
 /* Estilo do Card */
 .services-card {
-    background-color: var(--white);
-    border: 1px solid var(--darkGreen);
+    background-color: var(--bgWhite);
+	border-radius:15px;
     padding: 40px 35px;
     transition: all 0.3s ease;
     display: flex;
@@ -598,19 +610,19 @@ go-up a:hover {
     align-items: flex-start;
     position: relative;
     height: 100%;
+
 }
 
 /* Efeito Hover no Card */
 .services-card:hover {
-    border-color: var(--lightGreen);
-    box-shadow: 0 10px 30px var(--shadowBlack);
+    box-shadow: 10px 10px 5px var(--principalGreen);
     transform: translateY(-5px); 
 }
 
 /* Ícone do Serviço */
 .card-icon {
     margin-bottom: 25px;
-    color: var(--darkGreen); 
+    color: var(--principalGreen); 
     transition: color 0.3s ease;
 }
 
@@ -629,7 +641,7 @@ go-up a:hover {
 .card-title {
     font-size: 22px;
     font-weight: 700;
-    color: var(--darkGreen);
+    color: var(--principalGreen);
     margin-bottom: 15px;
     line-height: 1.3;
 }
@@ -744,97 +756,111 @@ go-up a:hover {
 .mfp-zoom-in.mfp-removing.mfp-bg { opacity: 0; }
 /* Services END */
 
-/* Gallery START */
-.s-gallery {
-	padding: 100px 0;
-	background-color: var(--bgLightGray);;
+/* Portfolio START */
+.s-portfolio-carousel {
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--bgDarkGreen);
 }
 
-.gallery-wrap {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 40px;
+.s-portfolio-carousel .swiper-pagination {
+    bottom: 0;
+    position: static;
+    margin-top: 40px;
 }
 
-.gallery-wrap a {
-	position: relative;
-	overflow: hidden;
+.portfolio-card {
+    background-color: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(95, 87, 87, 0.12);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.gallery-item:nth-child(n+7) {
-	display: none;
+.portfolio-thumb {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
 }
 
-.gallery-wrap a.gallery-visible {
-	display: block;
+.portfolio-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
 }
 
-.gallery-wrap a img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+.portfolio-card:hover .portfolio-thumb img {
+    transform: scale(1.05);
 }
 
-.gallery-wrap a:hover::before,
-.gallery-wrap a:hover::after,
-.gallery-wrap a:hover .gallery-border {
-	opacity: 1;
+.portfolio-body {
+    padding: 20px 25px;
+    text-align: left;
 }
 
-.gallery-wrap a::before {
-	content: 'Zoom';
-	background-color: var(--overlayHover);
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: var(--white);;
-	font-size: 22px;
-	padding-top: 50px;
-	margin-top: -20px;
-	opacity: 0;
-	transition: 0.5s ease;
+.portfolio-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #000;
 }
 
-.gallery-wrap a::after {
-	content: '';
-	background-image: url('../images/magnify.svg');
-	background-size: 100% 100%;
-	background-position: center center;
-	background-repeat: no-repeat;
-	width: 35px;
-	height: 35px;
-	z-index: 1;
-	position: absolute;
-	margin-top: -20px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	opacity: 0;
-	transition: 0.5s ease;
+.portfolio-cat {
+    font-size: 14px;
+    color: var(--textGray);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
-.gallery-border {
-	border: 1px solid var(--white);;
-	width: calc(100% - 35px);
-	height: calc(100% - 35px);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	opacity: 0;
-	transition: 0.5s ease;
+@media screen and (max-width: 768px) {
+    .s-portfolio-carousel {
+        padding: 60px 0;
+    }
+    .portfolio-thumb {
+        height: 200px;
+    }
 }
 
-.gallery-btn {
-	text-align: center;
-	margin-top: 44px;
+@media screen and (max-width: 575px) {
+    
+    /* 1. Removemos a altura forçada de 100% para o card "abraçar" o conteúdo */
+    .portfolio-card {
+        height: auto !important; 
+        min-height: 0;
+    }
+
+    /* 2. Reduzimos a altura da imagem para equilibrar com o texto curto */
+    .portfolio-thumb {
+        height: 180px; /* Era 250px, reduzimos para não dominar a tela */
+    }
+
+    /* 3. Reduzimos o espaçamento interno (padding) do texto */
+    .portfolio-body {
+        padding: 15px 20px; /* Reduzido de 20px 25px */
+        flex-grow: 0; /* Impede que o corpo cresça para preencher espaço vazio */
+    }
+
+    .portfolio-title {
+        font-size: 16px; 
+        margin-bottom: 4px;
+    }
+
+    .portfolio-cat {
+        font-size: 12px;
+    }
+    
+    /* Opcional: Ajuste se os slides do Swiper estiverem forçando altura */
+    .portfolio-swiper .swiper-slide {
+        height: auto;
+    }
 }
 
-/* Gallery END */
+/* Portfolio END */
 
 
 /* Why START */
@@ -888,7 +914,7 @@ go-up a:hover {
     font-size: 20px; 
     font-weight: 700;
     margin-bottom: 10px;
-    color: var(--black);
+    color: var(--principalGreen);
 }
 
 .why-features-desc {
@@ -981,69 +1007,6 @@ go-up a:hover {
 }
 
 /* Team END */
-
-
-/* Reviews START */
-.s-reviews {
-	padding: 100px 0;
-}
-
-.s-reviews .swiper-pagination {
-	bottom: 0;
-	position: static;
-	margin-top: 40px;
-}
-
-.reviews-item {
-	background-color: var(--white);;
-	box-shadow: 0px 4px 4px 0px var(--shadowWarm);
-}
-
-.reviews-thumb img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.reviews-body {
-	padding: 5px 30px 20px 30px;
-}
-
-.reviews-name {
-	font-size: 22px;
-	font-weight: 700;
-	margin-bottom: 4px;
-}
-
-.reviews-profi {
-	font-weight: 500;
-	color: var(--mediumGreen);
-	margin-bottom: 15px;
-}
-
-.reviews-comment {
-	color: var(--textGray);
-	margin-bottom: 20px;
-}
-
-.reviews-social {
-	border-top: 1px solid var(--borderGray);
-	padding-top: 20px;
-	display: flex;
-	align-items: center;
-	column-gap: 25px;
-}
-
-.reviews-social a {
-	display: inline-block;
-	transition: filter 0.5s ease;
-}
-
-.reviews-social a:hover {
-	filter: invert(1);
-}
-
-/* Reviews END */
 
 
 /* =========================================
@@ -1210,7 +1173,7 @@ a.partners-item:hover .partner-name {
 }
 
 .form-map:hover iframe {
-    filter: grayscale(0%) hue-rotate(0deg) saturate(1);
+    /* filter: grayscale(0%) hue-rotate(0deg) saturate(1); */
     opacity: 1;
 }
 
@@ -1219,16 +1182,16 @@ a.partners-item:hover .partner-name {
 }
 
 .form-right form {
-	background-color: var(--lightGreen); 
+	background-color: var(--lighterGreen); 
     padding: 60px 45px;
     position: relative;
-    box-shadow: 0px 10px 20px var(--lightGreen); 
-    border-radius: 20px;
+    /* box-shadow: 0px 10px 20px var(--lightGreen);  */
+    border-radius: 15px;
 }
 .form-title {
     font-size: 24px;
     font-weight: 700;
-    color: var(--darkGreen); 
+    color: var(--principalGreen); 
     text-align: center;
     margin-bottom: 30px; 
     line-height: 1.2;
@@ -1268,7 +1231,7 @@ a.partners-item:hover .partner-name {
 .modal-form input:focus {
     /* border: 1px solid var(--mediumGreen); */
     background-color: var(--white);
-   	box-shadow: 0 0 0 4px var(--mediumGreen);
+   	box-shadow: 0 0 0 2px var(--mediumGreen);
     transition: all 0.3s ease;
 }
 
@@ -1592,17 +1555,6 @@ a.partners-item:hover .partner-name {
 
 	/* Services 992 END */
 
-	/* Gallery 992 START */
-	.s-gallery {
-		padding: 60px 0;
-	}
-
-	.gallery-wrap {
-		grid-gap: 20px;
-	}
-
-	/* Gallery 992 END */
-
 	/* Why us 992 START */
 	.s-why {
 		padding: 60px 0;
@@ -1661,13 +1613,6 @@ a.partners-item:hover .partner-name {
 	}
 
 	/* Our team 992 END */
-
-	/* Reviews 992 START */
-	.s-reviews {
-		padding: 60px 0;
-	}
-
-	/* Reviews 992 END */
 
 	/* Form 992 START */
 	.s-form {
@@ -1919,12 +1864,6 @@ a.partners-item:hover .partner-name {
 
 	/* Services 768 END */
 
-	/* Gallery 768 START */
-	.gallery-wrap {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	/* Gallery 768 END */
 
 	/* Our team 768 START */
 	.team-row {
@@ -1939,25 +1878,6 @@ a.partners-item:hover .partner-name {
 
 	/* Our team 768 END */
 
-
-	/* Reviews 768 START */
-	.reviews-body {
-		padding: 5px 20px 20px 20px;
-	}
-
-	.reviews-name {
-		font-size: 18px;
-	}
-
-	.reviews-profi {
-		font-size: 14px;
-	}
-
-	.reviews-comment {
-		font-size: 14px;
-	}
-
-	/* Reviews 768 END */
 
 	/* Footer 768 START */
 	.site-footer {
@@ -1993,8 +1913,6 @@ a.partners-item:hover .partner-name {
 		text-align: center;
 	}
 
-
-
 	.def-title::after {
 		content: '';
 		height: 1px;
@@ -2008,6 +1926,9 @@ a.partners-item:hover .partner-name {
 		background-color: var(--white);;
 	}
 
+	.social-sidebar{
+		display: none;
+	}
 	/* All styles END */
 
 	/* Banner 575 START */
@@ -2019,7 +1940,7 @@ a.partners-item:hover .partner-name {
 	.swiper-autoheight, .swiper-autoheight .swiper-slide{
 		height:inherit!important;
 	}
-	.swiper-wrapper{
+	.s-banner .swiper-wrapper{
 		height:475px!important;
 	}
 	
@@ -2061,21 +1982,6 @@ a.partners-item:hover .partner-name {
 
 	/* Services 575 END */
 
-	/* Gallery 575 START */
-	.s-gallery {
-		padding: 40px 0;
-	}
-
-	.gallery-wrap {
-		grid-gap: 15px;
-	}
-
-	.gallery-btn {
-		margin-top: 30px;
-	}
-
-	/* Gallery 575 END */
-
 	/* Our team 575 START */
 	.team-item {
 		width: 100%;
@@ -2083,17 +1989,6 @@ a.partners-item:hover .partner-name {
 
 	/* Our team 575 END */
 
-	/* Partners 575 START */
-	.partners-row {
-		column-gap: 40px;
-		animation: move 5s linear infinite;
-	}
-
-	.partners-item img {
-		max-width: 200px;
-	}
-
-	/* Partners 575 END */
 
 	/* Form 575 START */
 	.form-right form {
@@ -2194,25 +2089,25 @@ a.partners-item:hover .partner-name {
 
 .solid .side:nth-child(5) {
 	transform: rotateY(450deg) translateZ(100px) rotateX(144.73deg);
-	border-bottom-color: var(--white);
+	border-bottom-color: var(--lighterGreen);;
 	opacity:0.1;
 }
 
 .solid .side:nth-child(6) {
 	transform: rotateY(540deg) translateZ(100px) rotateX(144.73deg);
-	border-bottom-color: var(--white);
+	border-bottom-color: var(--lighterGreen);;
 	opacity:0.1;
 }
 
 .solid .side:nth-child(7) {
 	transform: rotateY(630deg) translateZ(100px) rotateX(144.73deg);
-	border-bottom-color: var(--white);
+	border-bottom-color: var(--lighterGreen);;
 	opacity:0.1;
 }
 
 .solid .side:nth-child(8) {
 	transform: rotateY(720deg) translateZ(100px) rotateX(144.73deg);
-	border-bottom-color: var(--white);
+	border-bottom-color: var(--lighterGreen);
 	opacity:0.1;
 }
 
