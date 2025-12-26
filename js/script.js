@@ -303,5 +303,29 @@ document.addEventListener('DOMContentLoaded', () => {
     tick();
 	// 3D SOLID DRAG/ROTATE END
 
+
+	/* =========================================
+	GA4 Event Tracking - Engeplena
+	Captura cliques em elementos com data-track
+	========================================= */
+	document.addEventListener('click', function(e) {
+		// Verifica se o elemento clicado (ou pai) tem o atributo data-track
+		const target = e.target.closest('[data-track]');
+		
+		if (target) {
+			const eventName = target.getAttribute('data-track');
+			
+			// Envia para o Google Analytics 4
+			if (typeof gtag === 'function') {
+				gtag('event', 'click_cta', {
+					'event_category': 'engagement',
+					'event_label': eventName,
+					'link_url': target.href || 'no-link'
+				});
+				console.log('GA4 Event Sent:', eventName); // Para você testar no console
+			}
+		}
+	});
+
 })
 
