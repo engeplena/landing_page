@@ -1,11 +1,11 @@
 {
     "name": "gestor_obras",
-    "short_name": "gestor_obras",
+    "short_name": "Gestor",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Sistema de Gestão de Obras",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
