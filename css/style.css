@@ -652,7 +652,7 @@ input::placeholder, textarea::placeholder { color: var(--textLightGray); }
 .s-team .container { position: relative; z-index: 2; }
 .s-team .center-title { color: var(--white); }
 .s-team .center-title::after { background-color: var(--white); }
-.team-row { display: flex; justify-content: center; column-gap: 35px; flex-wrap: wrap; row-gap: 35px; }
+.team-row { display: flex; justify-content: center; column-gap: 35px; flex-wrap: wrap; row-gap: 35px;align-items: stretch; }
 .team-item {
     background-color: var(--white);
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
@@ -673,6 +673,7 @@ input::placeholder, textarea::placeholder { color: var(--textLightGray); }
 }
 .team-item:hover .team-thumb img { transform: scale(1.05); }
 .team-body {
+    flex:1;
     background-color: var(--white);
     padding: 25px 30px;
     text-align: center;
@@ -685,7 +686,7 @@ input::placeholder, textarea::placeholder { color: var(--textLightGray); }
     font-size: 20px;
     font-weight: 700;
     color: var(--black);
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     line-height: 1.3;
 }
 .team-profi {
@@ -695,8 +696,61 @@ input::placeholder, textarea::placeholder { color: var(--textLightGray); }
     font-weight: 600;
     letter-spacing: 0.5px;
     margin: 0;
+    min-height: 45px;
+    align-content:center;
 }
 
+.team-item:hover .team-divider {
+    width: 80px;
+    border-top-color: var(--lightGreen);
+}
+
+.team-divider {
+    border: 0;
+    border-top: 1px solid var(--lightGreen);
+    margin: 10px auto; 
+    width: 40px;
+    transition: width 0.3s ease;
+}
+
+.team-qualifications strong {
+    color: #666;
+    font-weight: 700;
+}
+
+.qual-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.team-qualifications {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Garante alinhamento se o container for centralizado */
+}
+.team-qualifications li {
+    font-size: 0.9rem;
+    font-weight: 400; /* Retira o bold para não cansar a vista */
+    color: #666; /* Cor cinza para hierarquia secundária */
+    line-height: 1.5;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 18px;
+}
+
+/* Bullet customizado e sutil */
+.team-qualifications li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--principalGreen);
+    font-size: 0.8rem;
+}
 /* --- PARTNERS --- */
 .s-partners { padding: 80px 0; background-color: var(--bgLightGray); overflow: hidden; }
 .s-partners .container { max-width: 85%; }
