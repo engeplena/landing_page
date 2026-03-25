@@ -281,7 +281,7 @@ input::placeholder, textarea::placeholder { color: var(--textLightGray); }
 .banner-content {
     position: relative;
     z-index: 1;
-    max-width: 750px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 .banner-subtitle {

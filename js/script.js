@@ -156,9 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		},
 	});
-	$('.modal-form-close').on('click', function() {
-		$.magnificPopup.close();
-	});
+
 	// Services END
 
 	// Portfolio START
