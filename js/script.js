@@ -145,20 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 	// Banner END
 
-	// Services START
-	$('.services-btn').magnificPopup({
-		type: 'inline',
-		showCloseBtn: false,
-		removalDelay: 500,
-		callbacks: {
-			beforeOpen: function() {
-			   this.st.mainClass = this.st.el.attr('data-effect');
-			}
-		},
-	});
-
-	// Services END
-
 	// Portfolio START
     const portfolioSwiper = new Swiper('.portfolio-swiper', {
         speed: 1000,
