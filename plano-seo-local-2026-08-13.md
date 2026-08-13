@@ -170,7 +170,8 @@ Rode estes checagens depois de cada ação:
 
 - [ ] `site:guiamais.com.br "Engeplena"` → resultado de **Itabirito** correto acima do RJ (até 60 dias)
 - [x] Bing Maps → ficha da Engeplena Itabirito com NAP correto (2026-08-13, Webmaster Tools verificado)
-- [ ] Busca Google por "Engeplena" → resolve para a empresa certa, sem cluster "Pio XII"
+- [x] Busca Google por "Engeplena" → resolve para a empresa certa, sem cluster "Pio XII" (verificado 2026-08-13)
+- [x] Favicon PNG verde (`images/favicon-green.png`, 256px) linkado nas 8 páginas antes do SVG — Google Search não suporta SVG (2026-08-13). ⏳ Aparecer no SERP após recrawl; para acelerar: Search Console → URL Inspection → Request Indexing
 - [ ] Contagem de avaliações do GBP → **≥ 10** (meta 60–90 dias)
 - [ ] Nenhuma semana sem nova avaliação; respostas do dono em <48h
 - [x] `grep -i "sala 306\|pio xii" index.html` → nada (garantido)
