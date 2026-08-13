@@ -1,120 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+<head>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  "name": "Engeplena Engenharia Ltda.",
-  "image": "https://www.engeplena.com.br/images/logo_colorida.png",
-  "telephone": ["+55-31-3561-3966", "+55-31-98795-0463"],
-  "contactPoint": [
+  "@graph": [
     {
-      "@type": "ContactPoint",
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://www.engeplena.com.br/#business",
+      "name": "Engeplena Engenharia Ltda.",
+      "legalName": "ENGEPLENA ENGENHARIA LTDA - ME",
+      "url": "https://www.engeplena.com.br/",
+      "image": "https://www.engeplena.com.br/images/logo_colorida.png",
+      "logo": "https://www.engeplena.com.br/images/logo_colorida.png",
+      "email": "contato@engeplena.com.br",
       "telephone": "+55-31-3561-3966",
-      "contactType": "customer service",
-      "areaServed": "BR",
-      "availableLanguage": "Portuguese"
+      "foundingDate": "2006-04-05",
+      "taxID": "07.936.059/0001-35",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Carlos Michel, 66",
+        "addressLocality": "Itabirito",
+        "addressRegion": "MG",
+        "postalCode": "35450-078",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -20.2529953,
+        "longitude": -43.8041709
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Itabirito"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Região Central de Minas Gerais"
+        },
+        {
+          "@type": "State",
+          "name": "Minas Gerais"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "08:00",
+          "closes": "16:30"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+55-31-3561-3966",
+          "contactType": "customer service",
+          "areaServed": "BR",
+          "availableLanguage": "Portuguese"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+55-31-98795-0463",
+          "contactType": "WhatsApp",
+          "areaServed": "BR",
+          "availableLanguage": "Portuguese"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/engeplena/",
+        "https://www.facebook.com/engeplena"
+      ],
+      "founder": [
+        {
+          "@id": "https://www.engeplena.com.br/#junaia"
+        },
+        {
+          "@id": "https://www.engeplena.com.br/#antonio"
+        }
+      ],
+      "employee": [
+        {
+          "@id": "https://www.engeplena.com.br/#junaia"
+        },
+        {
+          "@id": "https://www.engeplena.com.br/#antonio"
+        }
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Projetos de Engenharia Civil e BIM",
+            "description": "Projetos estruturais em concreto e metálicas, elétricos, hidrossanitários e modelagem arquitetônica (BIM)."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Consultoria Ambiental",
+            "description": "Regularização, licenciamento ambiental e estudos de impacto com foco em sustentabilidade em MG."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Plotagem, Impressão e Cópias",
+            "description": "Impressão técnica de projetos em grandes formatos (A0, A1, A2) e plotagem de alta definição."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Gestão e Administração de Obras",
+            "description": "Gerenciamento completo: orçamento, contratação de mão de obra e suporte fiscal."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Laudos Técnicos e Perícias",
+            "description": "Pareceres técnicos, vistoria de vizinhança, análise de viabilidade e regularização de imóveis."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Execução e Construção Civil",
+            "description": "Execução completa de obras residenciais e comerciais, da fundação ao acabamento."
+          }
+        }
+      ]
     },
     {
-      "@type": "ContactPoint",
-      "telephone": "+55-31-98795-0463",
-      "contactType": "WhatsApp",
-      "areaServed": "BR",
-      "availableLanguage": "Portuguese"
+      "@type": "Person",
+      "@id": "https://www.engeplena.com.br/#junaia",
+      "name": "Junaia de Paula Lacerda",
+      "jobTitle": "Sócia-Administradora · Engenheira Civil",
+      "worksFor": {
+        "@id": "https://www.engeplena.com.br/#business"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidade Federal de Ouro Preto (UFOP)"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "CREA-MG",
+        "name": "Registro Nacional",
+        "value": "1402661533"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Mestrado",
+          "name": "Mestra em Engenharia Ambiental (UFOP)"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Especialização",
+          "name": "Estruturas de Concreto Armado (INBEC)"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Registro Profissional",
+          "name": "CREA-MG — Engenheira Civil (Registro Nacional 1402661533)"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.engeplena.com.br/#antonio",
+      "name": "Antônio Carlos Cunha Júnior",
+      "jobTitle": "Sócio-Administrador · Eng. Civil (Ênfase em Estruturas)",
+      "worksFor": {
+        "@id": "https://www.engeplena.com.br/#business"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidade Federal de Ouro Preto (UFOP)"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "CREA-MG",
+        "name": "Registro Nacional",
+        "value": "1402661576"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Especialização",
+          "name": "Gestão de Projetos (IETEC)"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Especialização",
+          "name": "Estruturas Metálicas (INBEC)"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Especialização",
+          "name": "Patologia das Estruturas (IPOG)"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Registro Profissional",
+          "name": "CREA-MG — Engenheiro Civil (Registro Nacional 1402661576)"
+        }
+      ]
     }
-  ],
-  "url": "https://www.engeplena.com.br",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "R. Carlos Michel, 66, Sala 306 - Centro",
-    "addressLocality": "Itabirito",
-    "addressRegion": "Minas Gerais",
-    "postalCode": "35450-000",
-    "addressCountry": "BR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -20.25287449508203,
-    "longitude": -43.80417090275286
-  },
-  "areaServed": [
-    { "@type": "City", "name": "Itabirito" },
-    { "@type": "AdministrativeArea", "name": "Minas Gerais" },
-    { "@type": "AdministrativeArea", "name": "Região Central de MG" }
-  ],
-  "makesOffer": [
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Projetos de Engenharia Civil e BIM",
-        "description": "Projetos estruturais em concreto e metálicas, elétricos, hidrossanitários e modelagem arquitetônica (BIM)."
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Consultoria Ambiental",
-        "description": "Regularização, licenciamento ambiental e estudos de impacto com foco em sustentabilidade em MG."
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Plotagem, Impressão e Cópias",
-        "description": "Impressão técnica de projetos em grandes formatos (A0, A1, A2) e plotagem de alta definição."
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Gestão e Administração de Obras",
-        "description": "Gerenciamento completo: orçamento, contratação de mão de obra e suporte fiscal."
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Laudos Técnicos e Perícias",
-        "description": "Pareceres técnicos, vistoria de vizinhança, análise de viabilidade e regularização de imóveis."
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Execução e Construção Civil",
-        "description": "Execução completa de obras residenciais e comerciais, da fundação ao acabamento."
-      }
-    }
-  ],
-  "openingHoursSpecification": [
-    {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-        "opens": "08:00",
-        "closes": "17:00"
-    },
-    {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Friday",
-        "opens": "08:00",
-        "closes": "16:30"
-    }
-  ],
-  "sameAs": [
-    "https://www.instagram.com/engeplena/",
-    "https://www.facebook.com/engeplena"
-  ],
-  "priceRange": "$$"
+  ]
 }
 </script>
 
-<head>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKRNWZQ6QW"></script>
@@ -212,9 +330,8 @@
                 <ul>
                     <li><a class="anchor-link" href="#s-about" data-track="nav_mobile_a_empresa">A empresa</a></li>
                     <li><a class="anchor-link" href="#s-services" data-track="nav_mobile_servicos">Serviços</a></li>
-                    <li><a class="anchor-link" href="#s-gallery" data-track="nav_mobile_portfolio">Portifólio</a></li>
+                    <li><a class="anchor-link" href="#s-gallery" data-track="nav_mobile_portfolio">Portfólio</a></li>
                     <li><a class="anchor-link" href="#s-team" data-track="nav_mobile_equipe">História</a></li>
-                    <li><a class="anchor-link" href="#s-partners" data-track="nav_mobile_clientes">Clientes</a></li>
                     <li><a class="anchor-link" href="#s-contact" data-track="nav_mobile_contato">Contato</a></li>
                 </ul>
             </nav>
@@ -226,7 +343,7 @@
                 <a href="https://www.facebook.com/engeplena" target="_blank" rel="noopener noreferrer" aria-label="Facebook" data-track="click_facebook_header_mobile">
                     <img src="images/facebook-circle-fill.svg" alt="" aria-hidden="true">
                 </a>
-                <a href="https://www.facebook.com/engeplena" target="_blank" rel="noopener noreferrer" aria-label="Facebook" data-track="click_whatsapp_header_mobile">
+                <a href="https://wa.me/5531987950463" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-track="click_whatsapp_header_mobile">
                     <img src="images/whatsapp-circle-fill.svg" alt="" aria-hidden="true">
                 </a>
                 <a href="mailto:contato@engeplena.com.br" aria-label="Email" data-track="click_email_header_mobile">
@@ -246,9 +363,8 @@
                     <ul>
                         <li><a class="anchor-link" href="#s-about" data-track="nav_desktop_a_empresa">A empresa</a></li>
                         <li><a class="anchor-link" href="#s-services" data-track="nav_desktop_servicos">Serviços</a></li>
-                        <li><a class="anchor-link" href="#s-gallery" data-track="nav_desktop_portfolio">Portifólio</a></li>
+                        <li><a class="anchor-link" href="#s-gallery" data-track="nav_desktop_portfolio">Portfólio</a></li>
                         <li><a class="anchor-link" href="#s-team" data-track="nav_desktop_equipe">Equipe</a></li>
-                        <li><a class="anchor-link" href="#s-partners" data-track="nav_desktop_clientes">Clientes</a></li>
                         <li><a class="anchor-link" href="#s-contact" data-track="nav_desktop_contato">Contato</a></li>
                     </ul>
                 </nav>
@@ -273,7 +389,7 @@
                     <div class="banner-content">
                         <div class="banner-subtitle wow fadeIn">Fundada em 2006</div>
                         <h1 class="banner-title">
-                            <strong>Engeplena Engenharia:</strong> </br> Consultoria em Projetos e Obras Civis. <!--<strong> em Itabirito e Região.</strong>.-->
+                            <strong>Engeplena Engenharia:</strong> <br> Consultoria em Projetos e Obras Civis em Itabirito e Região.
                         </h1>
                         <a href="#s-services" class="banner-btn def-btn anchor-link wow fadeIn" data-wow-delay="0.3s" data-track="cta_banner_slide1_servicos">Conheça nossos serviços</a>
                     </div>
@@ -311,7 +427,7 @@
                     <div class="banner-content">
                         <div class="banner-subtitle">Engenharia Plena a sua Disposição</div>
                         <h2 class="banner-title">
-                            Corpo técnico com <strong>qualificações em diversos institutos de excelência</strong>, uso de ferramentas de vanguarda em todas os serviços.
+                            Corpo técnico com <strong>qualificações em diversos institutos de excelência</strong>, uso de ferramentas de vanguarda em todos os serviços.
                         </h2>
                         <a href="#s-contact" class="banner-btn def-btn anchor-link" data-track="cta_banner_slide3_contato">Fale com um especialista</a>
                     </div>
@@ -340,9 +456,9 @@
                     <h2 class="def-title wow fadeInLeft" data-wow-delay="0.2s">Sobre a Engeplena</h2>
                     <div class="def-desc wow fadeInLeft" data-wow-delay="0.3s">
                         <p>
-                            Aplicando conceitos de engenharia colaborativa e simultânea, além do aprimoramento continuo de
+                            Aplicando conceitos de engenharia colaborativa e simultânea, além do aprimoramento contínuo de
                             nossos processos, a empresa coloca a disposição de seus clientes o que há de melhor em termos de
-                            projeto e execução nos segmentos que atuamos.
+                            projeto e execução nos segmentos em que atuamos.
                         </p>
                         <p>
                             Tendo como colaboradores mestres e doutores em diversas áreas e parceria com instituições de
@@ -387,26 +503,26 @@
 
                 <div class="numbers-right">
                     <div class="numbers-item wow fadeInUp">
-                        <div class="numbers-num"  aria-hidden="true">
-                            <span class="num-js" data-count="20">0</span>+
+                        <div class="numbers-num">
+                            <span class="num-js" data-count="20">20</span>+
                         </div>
                         <div class="numbers-desc">Anos de experiência</div>
                     </div>
                     <div class="numbers-item wow fadeInUp">
-                        <div class="numbers-num"  aria-hidden="true">
-                            +<span class="num-js" data-count="150">0</span><span>.000</span> m²
+                        <div class="numbers-num">
+                            +<span class="num-js" data-count="150">150</span><span>.000</span> m²
                         </div>
                         <div class="numbers-desc">em Projetos elaborados</div>
                     </div>
                     <div class="numbers-item wow fadeInUp">
-                        <div class="numbers-num" aria-hidden="true">
-                            +<span class="num-js" data-count="115">0</span><span>.000</span> m²
+                        <div class="numbers-num">
+                            +<span class="num-js" data-count="115">115</span><span>.000</span> m²
                         </div>
                         <div class="numbers-desc">em Obras executadas</div>
                     </div>
                     <div class="numbers-item wow fadeInUp">
-                        <div class="numbers-num" aria-hidden="true">R$ <span class="num-js" data-count="140">0</span> Mi+</div>
-                        <div class="numbers-desc" aria-hidden="true">em Orçamentos processados</div>
+                        <div class="numbers-num">R$ <span class="num-js" data-count="140">140</span> Mi+</div>
+                        <div class="numbers-desc">em Orçamentos processados</div>
                     </div>
                 </div>
 
@@ -723,6 +839,7 @@
                     <div class="team-body">
                         <h3 class="team-name">Junaia de Paula Lacerda</h3>
                         <p class="team-profi">Engenheira Civil (UFOP)</p>
+                        <p class="team-crea">CREA-MG · Registro Nacional 1402661533</p>
 
                         <hr class="team-divider">
 
@@ -731,7 +848,7 @@
                             <ul class="team-qualifications">
                                 <li><strong>Mestra em Eng. Ambiental (UFOP)</strong></li>
                                 <li>Estruturas de Concreto Armado (INBEC)</li>
-                                <li>Gestão e Planejamento de Obras</li> </ul>
+                                <li>Gestão e Planejamento de Obras</li>
                             </ul>
                         </div>
                     </div>
@@ -747,7 +864,8 @@
                     <div class="team-body">
                         <h3 class="team-name">Antônio Carlos Cunha Jr</h3>
                         <p class="team-profi">Eng. Civil (UFOP) - Ênfase em Estruturas</p>
-                        
+                        <p class="team-crea">CREA-MG · Registro Nacional 1402661576</p>
+
                         <hr class="team-divider">
 
                         <div class="team-qualifications-box">
@@ -765,7 +883,13 @@
         </div>
     </section>
 
-    <section class="s-partners" id="s-partners">
+    <!-- =========================================================================
+     SEÇÃO DE CLIENTES — DESATIVADA (work in progress)
+     Reativar quando houver clientes reais autorizados a aparecer no site.
+     Ao reativar: substituir os itens abaixo por logos reais (com permissão)
+     e links de sites verdadeiros. Nunca publicar logos/links de placeholder.
+     =========================================================================
+<section class="s-partners" id="s-partners">
         <div class="container">
             <h2 class="center-title wow fadeIn" data-wow-delay="0.1s">Nossos Clientes</h2>
 
@@ -821,6 +945,8 @@
             </div>
         </div>
     </section>
+========================================================================= -->
+
 
     <section class="s-form" id="s-contact">
         <div class="container">
@@ -903,12 +1029,17 @@
 
                 <div class="footer-left">
                     <div class="footer-logo">
-                        <a href="#" aria-label="Voltar ao topo" data-track="click_logo_footer">
-                            <img src="images/logo_mono.png" alt="Engeplena Engenharia" width="200" height="auto" loading="eager">
+                        <a href="./" aria-label="Página Inicial" data-track="click_logo_footer">
+                            <img src="images/logo_mono.png" alt="Engeplena Engenharia" width="200" loading="eager">
                         </a>
                     </div>
                     <div class="footer-desc">
                         A <strong>Engeplena</strong> é referência em engenharia civil, projetos e consultoria ambiental em <strong>Itabirito e região Central de Minas Gerais.</strong>
+                    </div>
+
+                    <div class="footer-credentials">
+                        <p><strong>CNPJ:</strong> 07.936.059/0001-35</p>
+                        <p><strong>Registros CREA-MG:</strong> Junaia de Paula Lacerda (1402661533) · Antônio Carlos Cunha Júnior (1402661576)</p>
                     </div>
                 </div>
 
@@ -946,7 +1077,7 @@
                             <div class="footer-info-text">R. Carlos Michel, 66, Centro - Itabirito/MG</div>
                         </a>
 
-                        <a href="https://wa.me/5531987950463" target="_blank" rel="noopener" class="footer-info-item" data-track="click_phone_footer" aria-label="Fale conosco no WhatsApp">
+                        <a href="tel:+553135613966" class="footer-info-item" data-track="click_phone_footer" aria-label="Ligar para a Engeplena: 31 3561-3966">
                             <div class="footer-info-icon">
                                 <img src="images/phone-circle-fill.svg" alt="" aria-hidden="true" width="25" height="25">
                             </div>

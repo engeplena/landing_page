@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+
+# Aplicativo interno (gestor de obras) - privado, fora do índice
+Disallow: /app/
+
 Sitemap: https://www.engeplena.com.br/sitemap.xml

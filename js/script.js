@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Number counter START
 	function animateCounter(element, targetValue, duration) {
-		jQuery({ count: jQuery(element).text() }).animate(
+		jQuery({ count: 0 }).animate(
 			{
 				count: targetValue
 			},

@@ -822,6 +822,24 @@ a.partners-item:hover .partner-name { color: var(--principalGreen); }
     padding: 60px 0 60px 60px;
 }
 .footer-desc { color: var(--textOffWhite); line-height: 1.7; }
+
+.team-crea {
+    color: #999;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    margin: 0 0 6px;
+}
+
+.footer-credentials {
+    color: var(--textOffWhite);
+    line-height: 1.7;
+    font-size: 0.85rem;
+    margin-top: 18px;
+    opacity: 0.9;
+}
+.footer-credentials p { margin: 0 0 6px; }
+.footer-credentials strong { color: var(--white); font-weight: 600; }
 .footer-title { font-size: 18px; margin-bottom: 18px; }
 .footer-nav ul { list-style-type: none; padding: 0; font-size: 14px; color: var(--textOffWhite); }
 .footer-nav ul li:nth-last-child(n+2) { margin-bottom: 15px; }
