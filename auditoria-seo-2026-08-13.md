@@ -7,6 +7,43 @@
 
 ---
 
+## 🔁 Re-auditoria 2026-08-13 (pós-Fase 2) — deploy em produção
+
+**Contexto:** Fase 2 (páginas de serviço dedicadas) implementada e publicada em `main` em 2026-08-13. Re-auditoria **ao vivo** contra https://www.engeplena.com.br (9 URLs, 46 checks, **46/46 passaram**).
+
+### Score reavaliado (mudanças com evidência ao vivo)
+
+| Categoria | Peso | Baseline | **Pós-Fase 2** | Evidência |
+|---|---|---|---|---|
+| SEO Técnico | 22% | 72 | **82** | `/servicos/` + 6 páginas deixam de dar 404; sitemap.xml com 9 locs; canonical próprio por página; robots.txt com Sitemap |
+| Qualidade de Conteúdo | 23% | 44 | **62** | 6 páginas de ~800 palavras únicas (915/837/822/850/833/819) — antes ~534 palavras numa página única; C1 resolvido |
+| SEO On-Page | 20% | 55 | **70** | H1 local único + title + meta description por página de serviço (ex.: "Projetos Estruturais e de Engenharia em Itabirito e Região") |
+| Schema / Dados Estruturados | 10% | 75 | **88** | Service + FAQPage + BreadcrumbList por página, `provider: {"@id": ".../#business"}` ligando à entidade da homepage |
+| Prontidão para Busca com IA | 10% | 54 | **72** | Extratores agora encontram ~800 palavras citáveis por intenção de serviço (antes ~5% do texto); FAQ estruturada por página |
+| Performance (CWV) | 10% | 92 | 92 | Sem mudança (CLS 0.004 desktop / 0.002 mobile ao vivo) |
+| Imagens | 5% | 55 | 60 | 0 imagens quebradas nas 9 páginas (desktop + mobile) |
+| **Ponderado** | | **62** | **≈74** | |
+
+> **Nota de honestidade:** as sub-notas de Backlinks (18), SEO Local (54) e CrUX field data não foram re-medidas ao vivo (dependem de APIs/GSC); as novas notas refletem apenas o que foi verificado com evidência direta. A **indexação** (`site:engeplena.com.br/servicos`) é a falsificação de 8–12 semanas — ainda não verificável.
+
+### Itens que a re-auditoria confirma resolvidos
+
+| Item | Status | Evidência |
+|---|---|---|
+| **C1** — sem páginas de serviço dedicadas | ✅ resolvido | 7 URLs `/servicos/*` retornam 200 com schema Service+FAQ+Breadcrumb |
+| **H5** — números renderizavam "0" | ✅ resolvido | DOM renderiza `20 / 150 / 115 / 140` como texto estático |
+| **C2** — logos de parceiros fabricados | ✅ resolvido | seção `#s-partners` **não existe no DOM renderizado** (comentada/desativada) |
+| Linkagem interna | ✅ | rodapé + 6 cards "Saiba mais" na homepage → páginas; hub → 6 páginas; nenhum link interno 404 |
+
+### Itens ainda abertos (não eram da Fase 2)
+
+- **Fase 4 externa** (humano): GBP campo "site" → `/servicos/`, Bing Places, Apple Business Connect, GuiaMais, citações (CREA-MG, SINDUSCON, etc.).
+- **H6** — headers de segurança (HSTS, XFO, nosniff) exigem Cloudflare na frente do GitHub Pages.
+- **IndexNow** — chave + submissão (auditoria nota que só importa agora que existem páginas).
+- Backlog menor: touch targets mobile, `404.html` personalizado, `favicon.ico` (site usa SVG).
+
+---
+
 ## ✅ Dados Oficiais Confirmados (2026-08-13) — CONFEA + CNPJ
 
 Consulta realizada hoje no CONFEA (sistema de registro profissional) e em registro de CNPJ. Estes dados **resolvem lacunas das seções C3, H9 e do schema (Seção 7)**: agora há números reais de registro e um endereço canônico verificado.
