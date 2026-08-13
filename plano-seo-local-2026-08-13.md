@@ -68,11 +68,12 @@ Painel: https://business.google.com (login com o e-mail que controla a ficha).
 
 ## 3. Programa de avaliações (dimensão mais fraca — prioridade alta)
 
-### Link direto de avaliação (use este — aponta para a ficha correta)
+### Link direto de avaliação — ✅ ATUALIZADO (2026-08-13)
+O antigo `https://search.google.com/local/writereview?placeid=...` foi **descontinuado (404)**. Novo link gerado no painel do GBP (Resenhas → Obter mais avaliações) e já aplicado em `avaliacoes.html` (botão "Avaliar no Google"):
 ```
-https://search.google.com/local/writereview?placeid=0x3cf05f87311d2d10
+https://g.page/r/CRAtHTGHX_A8EAI/review
 ```
-Coloque este link no WhatsApp dos clientes e no e-mail de pós-projeto.
+Coloque este link no WhatsApp dos clientes e no e-mail de pós-projeto. (Mensagens devem apontar para `https://www.engeplena.com.br/avaliacoes.html` — curto e de marca.)
 
 ### Página "Avalie-nos" (já pronta no site)
 ```
@@ -101,12 +102,14 @@ Página dedicada com o botão de avaliação, os 3 passos e um link alternativo 
 
 ---
 
-## 5. Apple Business Connect
+## 5. Apple Business Connect — **PULADO** (decisão do usuário, 2026-08-13)
 
-1. https://businessconnect.apple.com (conta Apple ID).
-2. Reivindique a ficha da Engeplena com o NAP canônico.
-3. Adicione fotos (fachada + equipe), horários, categoria.
-4. Apple Maps = ~14–27% dos consumidores; é a maior lacuna de presença multi-plataforma.
+~~1. https://businessconnect.apple.com (conta Apple ID).~~
+~~2. Reivindique a ficha da Engeplena com o NAP canônico.~~
+~~3. Adicione fotos (fachada + equipe), horários, categoria.~~
+~~4. Apple Maps = ~14–27% dos consumidores; é a maior lacuna de presença multi-plataforma.~~
+
+Justificativa: negócio B2B (engenharia civil) em MG, sem relevância de público no Apple Maps. Se algum dia aparecer pedido recorrente de iPhone/Apple Maps, reavaliar.
 
 ---
 
@@ -118,6 +121,13 @@ Problema comprovado: o nome exato "ENGEPLENA ENGENHARIA LTDA" está ocupado no G
 2. **Sinalize a ficha do RJ** como duplicada/incorreta (link "Sugerir correção" / "Reivindicar" na ficha): informe que o nome correto para aquele CNPJ é outro ou que é entidade distinta. O objetivo é o Google parar de resolver o nome da Engeplena para a empresa do Rio.
 3. **Verificação:** `site:guiamais.com.br "Engeplena"` mostra o resultado de Itabirito com endereço/telefone corretos acima do RJ em até 60 dias.
 
+**Status 2026-08-13:**
+- ✅ Cadastro da ficha de Itabirito **enviado** — formulário inicial só pediu nome + WhatsApp (colocado o (31) 98795-0463, WhatsApp oficial da Engeplena — correto). Resposta do site: *"Agora é com a gente. Em breve um representante entrará em contato com você."* → ficha em **fila de moderação**.
+- ⏳ **AGUARDANDO:** contato do representante (via WhatsApp do cliente) para aprovar a ficha. No momento em que aprovar, completar o NAP completo: endereço `R. Carlos Michel, 66 — Centro, Itabirito/MG, CEP 35450-078` (cuidado: GuiaMais autocompleta -000), descrição da Seção 7, horários Seg–Qui 08–17 / Sex 08–16:30.
+- ⚠️ **Garantia ao aprovar:** o login/gestão da ficha deve ficar em e-mail controlado pelo usuário (ex.: `contato@engeplena.com.br`) — se ficar preso ao WhatsApp do cliente, perde-se a gestão.
+- 🚧 **Homônima RJ** (CNPJ 00.562.202/0001-27): sem botão "sugerir correção" na ficha; o único botão "essa empresa é minha" redireciona à home **sem login**. **Criar conta no GuiaMais não é possível antes do contato do representante** (confirmado 2026-08-13) — a sinalização do RJ fica **BLOQUEADA até a aprovação da ficha**. Ao aprovar, logado, tentar denunciar/corrigir; se nada, acionar o suporte pedindo correção/remoção da homônima. **NÃO reivindicar a ficha do RJ** (CNPJ não é do cliente — barra na verificação e é apropriação indevida).
+- **Fallback:** se não der para sinalizar, a ficha correta de Itabirito vence a resolução de identidade do Google por conta própria (CNPJ real + endereço real + site).
+
 ---
 
 ## 7. Corrigir fichas existentes com dados errados
@@ -127,6 +137,11 @@ Problema comprovado: o nome exato "ENGEPLENA ENGENHARIA LTDA" está ocupado no G
 | **Cylex** (cylex.com.br) | "Rua Pio XII, 109" | → R. Carlos Michel, 66 — Centro, Itabirito/MG, CEP 35450-078 |
 | **Bendito Guia** (benditoguia.com.br) | Endereço Pio XII 109-306 + horários 09–18h/Sáb 09–13h + texto template de Atibaia + nota contraditória ("4.3" / "0 avaliações") | → NAP canônico + horários corretos + reescrever descrição com texto de Itabirito; remover a nota inventada |
 | **todosnegocios** | Já mostra telefone/Itabirito | Revisar e confirmar NAP completo |
+
+**Status 2026-08-13:**
+- **Bendito Guia: RESIDUAL ACEITO (baixa prioridade).** CORREÇÃO DA CHECAGEM ANTERIOR: a ficha **existe e continua com dados errados** — `https://www.benditoguia.com.br/empresa/engeplena-engenharia-ltda-itabirito-mg` mostra "R. Pio XII, 109-306, CEP 35450-000" + texto template de Atibaia + nota inventada "4,3 / 0 avaliações". Não está no sitemap nem indexada no DDG (por isso a checagem anterior falhou), mas o Google a tem. **Sem caminho de edição/reivindicação exposto** (edição só via login JS; sem e-mail/página de contato no site). **Decisão: não perseguir agora** — diretório Tier-2 raspado, e a busca Google por "Engeplena" já resolve para a entidade correta de Itabirito sem o cluster Pio XII. Opção futura: registrar no site e tentar reivindicar após login.
+- **Cylex: CONCLUÍDO** (2026-08-13) — reivindicado via e-mail, NAP corrigido (Carlos Michel 66 / CEP 35450-078), palavras-chave preenchidas. ✅
+- **todosnegocios**: revisar NAP completo (pendente, mostra telefone/Itabirito já).
 
 **Descrição pronta para copiar (Bendito Guia / diretórios):**
 
@@ -153,14 +168,14 @@ Cadastrar a Engeplena (NAP canônico) em:
 
 Rode estes checagens depois de cada ação:
 
-- [ ] `site:guiamais.com.br "Engeplena"` → resultado de **Itabirito** correto acima do RJ
-- [ ] Bing Maps → ficha da Engeplena Itabirito com NAP correto
+- [ ] `site:guiamais.com.br "Engeplena"` → resultado de **Itabirito** correto acima do RJ (até 60 dias)
+- [x] Bing Maps → ficha da Engeplena Itabirito com NAP correto (2026-08-13, Webmaster Tools verificado)
 - [ ] Busca Google por "Engeplena" → resolve para a empresa certa, sem cluster "Pio XII"
 - [ ] Contagem de avaliações do GBP → **≥ 10** (meta 60–90 dias)
 - [ ] Nenhuma semana sem nova avaliação; respostas do dono em <48h
-- [ ] `grep -i "sala 306\|pio xii" index.html` → nada (já garantido)
-- [ ] Categoria primária do GBP = "Serviços de engenharia"/"Engenheiro civil"
-- [ ] Badge verificado visível no GBP
+- [x] `grep -i "sala 306\|pio xii" index.html` → nada (garantido)
+- [x] Categoria primária do GBP = "Serviços de engenharia"/"Engenheiro civil" (2026-08-13, configurado)
+- [x] Badge verificado visível no GBP (2026-08-13, admin obtido)
 
 ---
 
