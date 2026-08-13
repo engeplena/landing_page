@@ -72,10 +72,16 @@ Painel: https://business.google.com (login com o e-mail que controla a ficha).
 ```
 https://search.google.com/local/writereview?placeid=0x3cf05f87311d2d10
 ```
-Coloque este link no WhatsApp dos clientes, no e-mail de pós-projeto, e — depois — numa página "Avalie-nos".
+Coloque este link no WhatsApp dos clientes e no e-mail de pós-projeto.
+
+### Página "Avalie-nos" (já pronta no site)
+```
+https://www.engeplena.com.br/avaliacoes.html
+```
+Página dedicada com o botão de avaliação, os 3 passos e um link alternativo de WhatsApp. Use este endereço **no template do WhatsApp abaixo** (mais amigável que o link longo) e no rodapé do site.
 
 ### Template de WhatsApp (copiar e enviar ao cliente)
-> Olá, {Nome}! Aqui é a Engeplena Engenharia. Foi um prazer concluir {serviço} com você. Se puder dedicar 1 minuto, uma avaliação no Google ajuda muito nossa empresa na região. É rapidinho: [cole o link de avaliação acima]. Muito obrigado!
+> Olá, {Nome}! Aqui é a Engeplena Engenharia. Foi um prazer concluir {serviço} com você. Se puder dedicar 1 minuto, uma avaliação no Google ajuda muito nossa empresa na região. É rapidinho, é só acessar: https://www.engeplena.com.br/avaliacoes.html — muito obrigado!
 
 ### Regras de conformidade (não pule — proibido por Google + FTC)
 - Peça a **todos** os clientes, não só aos que parecem satisfeitos. Medir satisfação antes de pedir = filtrar = proibido (multa FTC US$ 53.088/violação nos EUA; Google penaliza).
