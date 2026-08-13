@@ -498,6 +498,17 @@ input::placeholder, textarea::placeholder { color: var(--textLightGray); }
     transition: transform 0.3s ease;
 }
 .services-card:hover .card-link .icon-arrow { transform: translateX(5px); }
+.card-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+.card-link-page {
+    color: var(--textGray);
+    font-weight: 500;
+}
+.card-link-page:hover { color: var(--principalGreen); }
 
 
 

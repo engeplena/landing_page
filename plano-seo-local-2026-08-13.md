@@ -170,7 +170,7 @@ Rode estes checagens depois de cada ação:
 - Posts no GBP: 2–4/mês.
 - Semear Q&A no GBP (5–10 perguntas).
 - Monitorar o badge verificado.
-- Quando as **páginas de serviço existirem (Fase 2)**: apontar o campo "site" do GBP para `/servicos/` e direcionar cada página de serviço como destino das citações.
+- **Páginas de serviço criadas em 2026-08-13 (Fase 2)**: apontar o campo "site" do GBP para `/servicos/` e direcionar cada página de serviço como destino das citações.
 
 ---
 
@@ -179,4 +179,4 @@ Rode estes checagens depois de cada ação:
 - `auditoria-seo-local-2026-08-13.md` — auditoria completa (evidências de cada item).
 - `auditoria-seo-2026-08-13.md` — auditoria geral (baseline).
 - `index.html` — site (Fase 1 já aplicada; **nada a mudar aqui na Fase 4**).
-- **Fase 2** (páginas de serviço `/servicos/*`) fica por último, como combinado.
+- **Fase 2** (páginas de serviço `/servicos/*`) — **FEITA em 2026-08-13** (hub + 6 páginas, schema Service/FAQ, linkagem hub-and-spoke).
