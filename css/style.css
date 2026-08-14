@@ -910,6 +910,23 @@ a.partners-item:hover .partner-name { color: var(--principalGreen); }
 }
 .powered-by a:hover { color: var(--principalGreen); border-bottom-color: var(--principalGreen); }
 
+.services-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-privacy {
+    margin-top: 8px;
+    font-size: 13px;
+}
+.footer-privacy a {
+    color: var(--textLightGray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-bottom: 1px dotted var(--textLightGray);
+}
+.footer-privacy a:hover { color: var(--principalGreen); border-bottom-color: var(--principalGreen); }
+
 /* --- MEDIA QUERIES (Organizadas) --- */
 @media screen and (max-width: 1200px) {
     .header-logo { padding: 5px 50px 5px 20px; }
