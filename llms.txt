@@ -1,0 +1,26 @@
+# Engeplena Engenharia
+
+> Engeplena Engenharia Ltda. — empresa de engenharia civil com sede em Itabirito/MG (fundada em 2006). Oferece projetos estruturais, consultoria ambiental, laudos e perícias, gestão de obras, execução de obras e plotagem para clientes corporativos e residenciais em Minas Gerais. CNPJ 07.936.059/0001-35.
+
+## Engeplena Engenharia
+
+- [Início](https://www.engeplena.com.br/): apresentação da empresa, portfólio, diferenciais e contato.
+- [Avaliações](https://www.engeplena.com.br/avaliacoes.html): avaliações de clientes e link para avaliação no Google.
+- [Política de Privacidade](https://www.engeplena.com.br/politica-de-privacidade.html): política de privacidade (LGPD).
+
+## Serviços
+
+- [Serviços](https://www.engeplena.com.br/servicos/): visão geral dos serviços de engenharia.
+- [Projetos Estruturais](https://www.engeplena.com.br/servicos/projetos-estruturais/): cálculo e projeto de estruturas de concreto, aço e madeira, com emissão de ART/CREA.
+- [Consultoria Ambiental](https://www.engeplena.com.br/servicos/consultoria-ambiental/): licenciamento ambiental, estudos e regularização.
+- [Laudos e Perícias](https://www.engeplena.com.br/servicos/laudos-e-pericias/): laudos técnicos, vistorias e perícias de engenharia.
+- [Gestão de Obras](https://www.engeplena.com.br/servicos/gestao-de-obras/): gerenciamento de obras, cronograma e fiscalização.
+- [Execução de Obras](https://www.engeplena.com.br/servicos/execucao-de-obras/): construção e execução de obras civis.
+- [Plotagem](https://www.engeplena.com.br/servicos/plotagem/): plotagem de projetos e desenhos técnicos.
+
+## Contato
+
+- Telefone: (31) 3561-3966
+- WhatsApp: +55 31 98795-0463
+- Endereço: Rua Carlos Michel, 66 — Centro, Itabirito/MG, CEP 35450-078
+- Site: https://www.engeplena.com.br/
